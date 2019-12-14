@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=El+Messiri&display=swap');
+
+
+/******************* Generic css *******************/
+
+* {
+  direction: rtl !important;
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: 'El Messiri', sans-serif;
+  font-size: 20px;
+  margin-top: 86px;
+}
+
+
+.img-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+.second-row {
+  right: 2.5rem;
+  top: 1.2rem;
+}
+
+/******************* Header section *******************/
+
+nav {
+  background-color: #1a1831;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+
+.app-logo-header {
+  width: 90px;
+  height: auto;
+}
+
+
+/******************* Main section *******************/
+
+main#container {
+  height: 530px;
+  background-image: url("assets/img/app-main.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+
+  span,
+  p {
+    padding: 0.5rem;
+    text-align: center !important;
+  }
+
+  .overlay {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+}
+
+.intro-btns {
+  .btn {
+    padding: 0.7rem 2.5rem;
+    font-size: 1.6rem;
+    margin: 0 1.5rem;
+  }
+}
+
+/******************* Footer section *******************/
+
+footer {
+  background-color: #1a1831;
+}
+
+footer p {
+  text-align: center !important;
+}
+
+.app-logo-footer {
+  width: 30px;
+  height: auto;
+}
+
+
+/******************* Footer section *******************/
+
+li.food-type {
+  cursor: pointer;
+}

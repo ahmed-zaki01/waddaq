@@ -1,0 +1,103 @@
+<main id="ver-container" class="bg-light">
+  <div class=" py-5 container-fluid rounded">
+    <h1 class="py-5">هيا بنا نتعرف علي أصناف الأطعمة النباتية المباحة</h1>
+
+    <!-- Pills Section -->
+    <!-- wow slideInRight" data-wow-duration="2s"-->
+    <div class="w-100 mt-5 py-5 wow slideInRight bg-light" data-wow-duration="2s">
+      <h2 class="py-5">{{ vegTypesTitles[0] }}</h2>
+      <div class="row" *ngIf="pills">
+        <div *ngFor="let item of pills" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/vegetarian', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legumes Section -->
+    <div class="w-100 py-5 wow bounceInDown bg-light" data-wow-duration="2s" data-wow-delay="1s">
+      <h2 class="pb-5">{{ vegTypesTitles[1] }}</h2>
+      <div class="row " *ngIf="legumes">
+        <div *ngFor="let item of legumes" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/vegetarian', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vegetables Section -->
+    <div class="w-100 py-5 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+      <h2 class="pb-5">{{ vegTypesTitles[2] }}</h2>
+      <div class="row " *ngIf="vegetables">
+        <div *ngFor="let item of vegetables" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/vegetarian', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fruits Section -->
+    <div class="w-100 py-5 wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+      <h2 class="pb-5">{{ vegTypesTitles[3] }}</h2>
+      <div class="row " *ngIf="fruits">
+        <div *ngFor="let item of fruits" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/vegetarian', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="py-5">والآن ننتقل إلي النباتات المحرمة</h1>
+
+    <!-- Forbidden Section -->
+    <div class="w-100 py-5 wow bounceInUp" data-wow-duration="2s" data-wow-delay="1s">
+      <div class="row " *ngIf="forbidden">
+        <div *ngFor="let item of forbidden" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/vegetarian', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

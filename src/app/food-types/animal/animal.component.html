@@ -1,0 +1,106 @@
+<main id="ver-container" class="bg-light">
+  <div class="py-5 container-fluid rounded">
+    <h1 class="py-5">هيا بنا نتعرف علي أصناف الأطعمة الحيوانية المباحة</h1>
+
+    <!-- Wild Section -->
+    <!-- wow slideInRight" data-wow-duration="2s"-->
+    <div class="w-100 mt-5 py-5 wow slideInRight" data-wow-duration="2s">
+      <h2 class="py-5">{{ aniTypesTitles[0] }}</h2>
+      <div class="row" *ngIf="wildAnimals">
+        <div *ngFor="let item of wildAnimals" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/animal', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sea Section -->
+    <div class="w-100 mt-5 py-5 wow slideInRight" data-wow-duration="2s">
+      <h2 class="py-5">{{ aniTypesTitles[1] }}</h2>
+      <div class="row" *ngIf="seaAnimals">
+        <div *ngFor="let item of seaAnimals" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/animal', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Birds Section -->
+    <div class="w-100 mt-5 py-5 wow slideInRight" data-wow-duration="2s">
+      <h2 class="py-5">{{ aniTypesTitles[2] }}</h2>
+      <div class="row" *ngIf="birds">
+        <div *ngFor="let item of birds" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/animal', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="py-5">والآن ننتقل إلي الحيوانات المحرمة</h1>
+
+
+    <!-- Forbidden Wild Section -->
+    <div class="w-100 mt-5 py-5 wow slideInRight" data-wow-duration="2s">
+      <h2 class="py-5">{{ aniTypesTitles[0] }}</h2>
+      <div class="row" *ngIf="wildForbidden">
+        <div *ngFor="let item of wildForbidden" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/animal', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Forbidden Bird Section -->
+    <div class="w-100 mt-5 py-5 wow slideInRight" data-wow-duration="2s">
+      <h2 class="py-5">{{ aniTypesTitles[3] }}</h2>
+      <div class="row justify-content-center" *ngIf="birdForbidden">
+        <div *ngFor="let item of birdForbidden" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <div class="img-container">
+              <img [src]="item.imgName" class="card-img-top" style="height: 163.247px;" alt />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.shortDesc }}</p>
+              <a [routerLink]="['/animal', item.engTitle]" class="btn btn-primary">لمعرفة المزيد ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

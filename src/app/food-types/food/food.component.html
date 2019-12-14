@@ -1,0 +1,254 @@
+<main class=" pb-5 text-right">
+  <!-- Food Introduction Section-->
+  <section class="food-intro bg-light rounded-0 py-5">
+    <div class="container-fluid row justify-content-between align-items-center">
+      <div class="food-img col-sm-4">
+        <img [src]="myFood.imgName" class="img-fluid" alt />
+      </div>
+      <div class="col-sm-8">
+        <div class="food-info text-center">
+          <h1 class="py-4 text-dark">{{ myFood.title }}</h1>
+          <div class="value">
+            <img [src]="myFood.valueImg" alt="" class="img-fluid">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Food Information Sections -->
+
+
+  <!-- When Information Section -->
+  <section class="food-info text-light my-3">
+    <div class="">
+      <div class="row align-items-center justify-content-center justify-content-md-between text-center p-5 rounded">
+        <div class="col-md-3 wow flip d-flex justify-content-center" data-wow-duration="1.5s">
+          <div class="ball d-flex align-items-center ">
+            <p class="when-title">{{myFood.information.when.title}}</p>
+          </div>
+        </div>
+
+        <div class="square col-md-6 wow fadeInDownBig text-white rounded" data-wow-duration="1s">
+          <div class="overlay w-100 h-100 d-flex align-items-center  justify-content-center">
+            {{myFood.information.when.answer}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food Info Question Div -->
+    <div [ngStyle]="{ 'background-image': 'url(' + questionBgImg + ')'}" class="food-question wow fadeInDown my-5 w-100"
+      data-wow-duration="1">
+
+      <div class="question-overlay row justify-content-center align-items-center w-100 h-100 py-5 px-3">
+        <div class="col-md-10 text-center">
+          <div class="ques py-5">
+            <span class="title">{{myFood.information.when.question.title}}</span>
+          </div>
+          <div class="py-2">
+
+            <div class="form-check d-flex justify-content-around">
+              <div class="radio" *ngFor="let option of myFood.information.when.question.options">
+                <input type="radio" #choice (click)="getSelectedValue(choice.value)"
+                  [name]="myFood.information.when.question.title" [value]="option" />
+                <label for="option">{{option}}</label>
+              </div>
+
+            </div>
+            <a class="btn btn-info btn-lg px-4 py-3 mt-4 shadow-none"
+              (click)="check(myFood.information.when.question.answer, myFood.information.when.key)">
+              تحقق</a>
+
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div #whenDiv></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Where Information Section -->
+  <section class="food-info text-light my-3">
+    <div class="">
+      <div class="row justify-content-center justify-content-md-between text-center p-5 rounded">
+        <div class="col-md-3 wow flip d-flex justify-content-center" data-wow-duration="1.5s">
+          <div class="ball d-flex align-items-center ">
+            <p>{{myFood.information.where.title}}</p>
+          </div>
+        </div>
+
+        <div class="square col-md-6 wow fadeInDownBig text-white rounded" data-wow-duration="1s">
+          <div class="overlay w-100 h-100 d-flex align-items-center  justify-content-center">
+            {{myFood.information.where.answer}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food Info Question Div -->
+    <div [ngStyle]="{ 'background-image': 'url(' + questionBgImg + ')'}" class="food-question wow fadeInDown my-5 w-100"
+      data-wow-duration="1">
+
+      <div class="question-overlay row justify-content-center align-items-center w-100 h-100 py-5 px-3">
+        <div class="col-md-10 text-center">
+          <div class="ques py-5">
+            <span class="title">{{myFood.information.where.question.title}}</span>
+          </div>
+          <div class="py-2">
+
+            <div class="form-check d-flex justify-content-around">
+              <div class="radio" *ngFor="let option of myFood.information.where.question.options">
+                <input type="radio" #choice (click)="getSelectedValue(choice.value)"
+                  [name]="myFood.information.when.question.title" [value]="option" />
+                <label for="option">{{option}}</label>
+              </div>
+            </div>
+            <a class="btn btn-info btn-lg px-4 py-3 mt-4 shadow-none"
+              (click)="check(myFood.information.where.question.answer, myFood.information.where.key)">
+              تحقق</a>
+
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div #whereDiv></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- benefits Information Section -->
+  <section class="food-info text-light my-3">
+    <div class="">
+      <div class="row justify-content-center justify-content-md-between text-center p-5 rounded">
+        <div class="col-md-3 wow flip d-flex justify-content-center" data-wow-duration="1.5s">
+          <div class="ball d-flex align-items-center ">
+            <p>{{myFood.information.benefits.title}}</p>
+          </div>
+        </div>
+
+        <div class="square col-md-6 wow fadeInDownBig text-white rounded" data-wow-duration="1s">
+          <div class="overlay w-100 h-100 d-flex align-items-center  justify-content-center">
+            <ul class="text-right">
+              <li *ngFor="let benefit of myFood.information.benefits.answer">
+                {{benefit}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food Info Question Div -->
+    <div [ngStyle]="{ 'background-image': 'url(' + questionBgImg + ')'}" class="food-question wow fadeInDown my-5 w-100"
+      data-wow-duration="1">
+
+      <div class="question-overlay row justify-content-center align-items-center w-100 h-100 py-5 px-3">
+        <div class="col-md-10 text-center">
+          <div class="ques py-5 text-center">
+            <span class="title">{{myFood.information.benefits.question.title}}</span>
+          </div>
+          <div class="py-2">
+
+            <div class="form-check d-flex justify-content-around">
+              <div class="radio" *ngFor="let option of myFood.information.benefits.question.options">
+                <input type="radio" #choice (click)="getSelectedValue(choice.value)"
+                  [name]="myFood.information.benefits.question.title" [value]="option" />
+                <label for="option">{{option}}</label>
+              </div>
+            </div>
+
+            <a class="btn btn-info btn-lg px-4 py-3 mt-4 shadow-none"
+              (click)="check(myFood.information.benefits.question.answer, myFood.information.benefits.key)">
+              تحقق</a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div #benefitDiv></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- sensitivity Information Section -->
+  <section class="food-info text-light my-3">
+
+    <div class="row justify-content-center justify-content-md-between text-center p-5 rounded">
+      <div class="col-md-3 wow flip d-flex justify-content-center" data-wow-duration="1.5s">
+        <div class="ball d-flex align-items-center">
+          <p class="">{{myFood.information.sensitivity.title}}</p>
+        </div>
+      </div>
+
+      <div class="square col-md-6 wow fadeInDownBig text-white rounded" data-wow-duration="1s">
+        <div class="overlay w-100 h-100 d-flex align-items-center  justify-content-center">
+          {{myFood.information.sensitivity.answer}}
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Food Info Question Div -->
+    <div [ngStyle]="{ 'background-image': 'url(' + questionBgImg + ')'}" class="food-question wow fadeInDown my-5 w-100"
+      data-wow-duration="1">
+
+      <div class="question-overlay row justify-content-center align-items-center w-100 h-100 py-5 px-3">
+        <div class="col-md-10 text-center">
+          <div class="ques py-5">
+            <span class="title">{{myFood.information.sensitivity.question.title}}</span>
+          </div>
+          <div class="py-2">
+
+            <div class="form-check d-flex justify-content-around">
+              <div class="radio" *ngFor="let option of myFood.information.sensitivity.question.options">
+                <input type="radio" #choice (click)="getSelectedValue(choice.value)"
+                  [name]="myFood.information.sensitivity.question.title" [value]="option" />
+                <label for="option">{{option}}</label>
+              </div>
+
+
+            </div>
+            <a class="btn btn-info btn-lg px-4 py-3 mt-4 shadow-none"
+              (click)="check(myFood.information.sensitivity.question.answer, myFood.information.sensitivity.key)">
+              تحقق</a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div #senseDiv></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ruling Information Section -->
+  <section class="food-info text-light my-3">
+    <div class="">
+      <div class="row justify-content-center justify-content-md-between text-center p-5 rounded">
+        <div class="col-md-3 wow flip d-flex justify-content-center" data-wow-duration="1.5s">
+          <div class="ball d-flex align-items-center ">
+            <p>{{myFood.information.ruling.title}}</p>
+          </div>
+        </div>
+
+        <div class="square col-md-6 wow fadeInDownBig text-white rounded" data-wow-duration="1s">
+          <div class="overlay w-100 h-100 d-flex align-items-center  justify-content-center">
+            {{myFood.information.ruling.answer}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</main>
