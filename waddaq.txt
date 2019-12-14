@@ -95,3 +95,10 @@
           (click)="check(myFood.information.when.question.answer, myFood.information)">
           تحقق</a>
       </div>
+
+
+   {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
