@@ -7,12 +7,11 @@ import { FoodComponent } from "./food-types/food/food.component";
 import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
+  { path: "", component: HomeComponent },
   { path: "vegetarian", component: VegeterianComponent },
   { path: "animal", component: AnimalComponent },
   { path: "vegetarian/:id", component: FoodComponent },
   { path: "animal/:id", component: FoodComponent },
-  { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: PageNotFoundComponent }
 ];
 
