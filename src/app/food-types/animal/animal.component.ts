@@ -82,9 +82,9 @@ export class AnimalComponent implements OnInit {
       shortDesc: "تتواجد هذه الطيور في البرية في شمال ووسط أمريكا، وحاليا يتم تربيتها في حقول كبيرة من أجل لحومها أساسآ وربما بيضها الكبير."
     },
     {
-      imgName: "../../../assets/img/animal/duck.jpg",
+      imgName: "../../../assets/img/animal/goose.jpg",
       title: "الأوز",
-      engTitle: "duck",
+      engTitle: "goose",
       shortDesc: "الأوز هو العضو الأكبر حجما من عائلة البط ويتميز عن اقرانه بالعائله بطول رقبته. الأوز من أكبر الطيور التي تستطيع الطيران."
     }
   ];

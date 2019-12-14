@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=El+Messiri&display=swap');
-
 
 /******************* Generic css *******************/
 
@@ -40,6 +38,12 @@ nav {
   width: 90px;
   height: auto;
 }
+
+.app-logo {
+  width: 120px;
+  height: auto;
+}
+
 
 
 /******************* Main section *******************/
@@ -82,7 +86,7 @@ footer p {
 }
 
 .app-logo-footer {
-  width: 30px;
+  width: 40px;
   height: auto;
 }
 
