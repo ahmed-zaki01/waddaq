@@ -158,12 +158,6 @@ export class VegeterianComponent implements OnInit, AfterViewInit {
       title: "الحشيش",
       engTitle: "cannabis",
       shortDesc: "نبات علاجي له تأثير مخدر من جنس كاسيات البذور من عائلة قنبية. هناك ثلاث أجناس معروفة للنبتة، قنب مزروع وقنب إنديكا، والقنب روديراليس"
-    },
-    {
-      imgName: "../../../assets/img/vegetarian/poppy.jpg",
-      title: "الخشخاش",
-      engTitle: "poppy",
-      shortDesc: "هي نباتات عشبية، وغالبًا ما تزرع لجمال الوان ازهارها. احد انواع الخشخاش هو الخشخاش المنوم، وهو مصدر لمخدر الأفيون"
     }
   ];
 

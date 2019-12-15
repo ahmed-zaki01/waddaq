@@ -1,104 +1,120 @@
-       valueImg: "../../../assets/img/food/.jpg",
-     information: {
+[
+  "",
+  {
+    imgName: "../../../assets/img/vegetarian/",
+    title: "",
+    valueImg: "../../../assets/img/food",
+    information: {
+        when: {
+          key: "when",
+          title: "متى بدأت زراعته",
+          answer: "",
+          question: {
+            title: "متي بدأت زراعة ",
+            options: ["", "", ""],
+            answer: ""
+          }
+        },
+        where: {
+          key: "where",
+          title: "أين بدأت زراعته",
+          answer: "",
+          question: {
+            title: "أين بدأت زراعة ",
+            options: ["", "", ""],
+            answer: ""
+          }
+        },
+        benefits: {
+          key: "benefits",
+          title: "فوائده",
+          answer: ["", "", "", ""],
+          question: {
+            title: "من فوائد ",
+            options: ["", "", ""],
+            answer: ""
+          }
+        },
+        sensitivity: {
+          key: "sensitivity",
+          title: "الحساسية",
+          answer: "",
+          question: {
+            title: "",
+            options: ["", "", ""],
+            answer: ""
+          }
+        },
+        ruling: {
+          title: "الحكم الشرعى",
+          answer: "الاصل في الامور الحل ما لم يأتي نص شرعي بتحريمها او لم تقاس على غيرها.",
+        },
+      }
+  }
+]
+
+
+[
+      "tobacco",
+      {
+        imgName: "../../../assets/img/vegetarian",
+        title: "التبغ",
+        valueImg: "../../../assets/img/food",
+        information: {
           when: {
             key: "when",
             title: "متى بدأت زراعته",
-            answer: "",
+            answer:
+
             question: {
-              title: "متي بدأت زراعة ",
-              option: ["", "", ""],
-              answer: ""
+              title: "متي بدأت زراعة التبغ",
+              options: [
+
+              ],
+              answer: "مع السكان الأصليين لأمريكا"
             }
           },
           where: {
             key: "where",
             title: "أين بدأت زراعته",
-            answer: "",
+            answer:
+              " يعود تاريخ زراعة التبغ إلى القارة الأمريكية حيث استخدمها السكان الأصليون في طقوسهم الدينية باعتبارها مسكنًا للأوجاع.",
             question: {
-              title: "أين بدأت رزاعة ",
-              option: ["", "", ""],
-              answer: ""
+              title: "أين بدأت زراعة التبغ",
+              options: ["أمريكا", "الصين", "إيران"],
+              answer: "أمريكا"
             }
           },
           benefits: {
             key: "benefits",
-            title: "فوائده",
-            answer: ["", "", "", "", ""],
+            title: "أضراره",
+            answer: [
+              "يؤثر علي الحمل للنساء",
+              "يؤثر علي الصحة الجنسية للرجل",
+              "يحتوي علي سموم كالنيكوتين، مما قد يسبب الوفاة"
+            ],
             question: {
-              title: "من فوائد ",
-              option: ["", "", ""],
-              answer: ""
+              title: "من أضرار التبغ علي صحة الإنسان",
+              options: ["يسبب الوفاة", "يؤثر علي الحمل", "جميع ما سبق"],
+              answer: "جميع ما سبق"
             }
           },
           sensitivity: {
             key: "sensitivity",
             title: "الحساسية",
-            answer: "",
+            answer:
+              "يشعر المدخن بالمتعة لحظة دخول النيكوتين الى الجهاز العصبي، ولكن في حال تلاشيه يتم إستبدال شعور المتعة باخر غير مريح، بحيث قد تصيبك عدة أعراض منها: مشكلة في التركيز، وكذلك العصبية، أيضا آلام في الرأس وزيادة الشهية",
             question: {
-              title: "",
-              option: ["", "", ""],
-              answer: ""
+              title: "من أعراض شرب سجائر التبغ",
+              options: ["ضعف التركيز", "تورم القدمين", "تقلص المعدة"],
+              answer: "ضعف التركيز"
             }
           },
           ruling: {
             title: "الحكم الشرعى",
-            answer: "الاصل في الامور الحل ما لم يأتي نص شرعي بتحريمها او لم تقاس على غيرها.",
-          },
+            answer:
+              "هو محرم بلا شك؛ لأنه يشتمل على أضرار كثيرة بينها الأطباء وبينها من استعمله. فالواجب على كل مسلم تركه والحذر منه؛ لأن الله حرم على المؤمن أن يضر نفسه، فهو يقول سبحانه: (وَلا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ)، ويقول جل وعلا: (وَلا تَقْتُلُوا أَنفُسَكُمْ إِنَّ اللَّهَ كَانَ بِكُمْ رَحِيمًا)"
+          }
         }
-
-
-
-
-
-
-  <!-- Food Information Section -->
-
-  <section class="food-info text-light my-3">
-    <div class="">
-      <div class="row justify-content-between text-center p-5 rounded">
-        <div class="ball col-3 wow flip d-flex align-items-center " data-wow-duration="1.5s">
-          <p>{{myFood.information.when.title}}</p>
-        </div>
-
-        <div class="square col-6 wow fadeInDownBig text-white rounded" data-wow-duration="1s">
-          <div class="overlay w-100 h-100 d-flex align-items-center  justify-content-center">
-            {{myFood.information.when.answer}}
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Food Info Question Div -->
-    <div [ngStyle]="{ 'background-image': 'url(' + questionBgImg + ')'}" class="food-question wow fadeInDown my-5 w-100"
-      data-wow-duration="1">
-
-      <div class="question-overlay row justify-content-center w-100 h-100 py-5 px-3">
-        <div class="col-12 ques py-5 text-center">
-          <span class="title">{{myFood.information.when.question.title}}</span>
-        </div>
-        <div class="col-12 py-2 ans justify-content-between">
-
-          <div class="form-check d-flex justify-content-around">
-            <div class="radio" *ngFor="let option of myFood.information.when.question.options">
-              <input type="radio" #choice (click)="getSelectedValue(choice.value)"
-                [name]="myFood.information.when.question.title" [value]="option" />
-              <label for="option">{{option}}</label>
-            </div>
-            <section #when class="check bg-light text-danger">
-
-            </section>
-          </div>
-        </div>
-
-        <a class="btn btn-info btn-lg px-4 py-3 mt-4 shadow-none"
-          (click)="check(myFood.information.when.question.answer, myFood.information)">
-          تحقق</a>
-      </div>
-
-
-   {
-                "glob": "_redirects",
-                "input": "src",
-                "output": "/"
-              }
+      }
+    ]
