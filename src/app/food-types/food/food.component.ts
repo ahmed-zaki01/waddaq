@@ -60,7 +60,7 @@ export class FoodComponent implements OnInit {
                 "مصدر عالي للكربوهيدرات",
                 "جميع ما سبق"
               ],
-              answer: ""
+              answer: "جميع ما سبق"
             }
           },
           sensitivity: {
