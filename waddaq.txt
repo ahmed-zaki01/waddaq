@@ -1,26 +1,26 @@
 [
   "",
   {
-    imgName: "../../../assets/img/vegetarian/",
+    imgName: "../../../assets/img/animal",
     title: "",
     valueImg: "../../../assets/img/food",
     information: {
         when: {
           key: "when",
-          title: "متى بدأت زراعته",
+          title: "متى بدأت تربيته",
           answer: "",
           question: {
-            title: "متي بدأت زراعة ",
+            title: "متي بدأت تربية ",
             options: ["", "", ""],
             answer: ""
           }
         },
         where: {
           key: "where",
-          title: "أين بدأت زراعته",
+          title: "أين يتواجد ",
           answer: "",
           question: {
-            title: "أين بدأت زراعة ",
+            title: "أين يتواجد ",
             options: ["", "", ""],
             answer: ""
           }
@@ -30,7 +30,7 @@
           title: "فوائده",
           answer: ["", "", "", ""],
           question: {
-            title: "من فوائد ",
+            title: "من فوائد لحم ",
             options: ["", "", ""],
             answer: ""
           }
@@ -40,7 +40,7 @@
           title: "الحساسية",
           answer: "",
           question: {
-            title: "",
+            title: "من أعراض الإفراط في تناول",
             options: ["", "", ""],
             answer: ""
           }
