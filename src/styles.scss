@@ -27,12 +27,11 @@ body {
   top: 1.2rem;
 }
 
+
 /******************* Header section *******************/
 
 nav {
   background-color: #0A0813;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 
 
@@ -51,23 +50,25 @@ nav {
 /******************* Main section *******************/
 
 main#container {
-  height: 461px;
   background-image: url("assets/img/app-main.jpg");
   background-position: center;
   background-size: 100% 100%;
+  font-size: 2rem;
 
   span,
   p {
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center !important;
   }
 
   .overlay {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
 }
+
+
 
 .intro-btns {
   .btn {
@@ -118,5 +119,20 @@ li.food-type {
 
   .app-logo {
     width: 100px;
+  }
+
+
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+  .intro-text * {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 800px) {
+  nav {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }

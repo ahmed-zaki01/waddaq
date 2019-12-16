@@ -1,23 +1,35 @@
 <main id="container">
   <div class="overlay py-4 wow slideInRight" data-wow-duration="2s">
-    <div class="intro-text py-5">
-      <h3 class="text-success">
-        <span class="text-success d-block pl-5">يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا
-          طَيِّبًا</span>
-        <span class="text-danger pr-5 d-block">
-          وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ
-          مُّبِينٌ
-        </span>
-      </h3>
+    <div class="row container-fluid align-items-start">
+      <div class="col-md-4 py-4">
+        <div class="morning d-flex justify-content-center justify-content-md-end">
+          <img src="../../assets/img/morning.gif" class="rounded" alt="morning">
+        </div>
+      </div>
+      <div class="col-md-8 pt-4 intro-text">
+        <h3 class="text-success">
+          <span class="text-success d-block pl-5">يَا أَيُّهَا النَّاسُ كُلُوا مِمَّا فِي الْأَرْضِ حَلَالًا
+            طَيِّبًا</span>
+          <span class="text-danger pr-5 d-block">
+            وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ ۚ إِنَّهُ لَكُمْ عَدُوٌّ
+            مُّبِينٌ
+          </span>
+        </h3>
 
-      <p class="text-info">
-        مرحبا بك في تطبيق ودق لتصنيف الأطعمة من حيث جنسها وحكمها
-      </p>
-      <p class="text-info">لمعرفة المزيد اختر أحد الصنفين التاليين</p>
+        <p class="text-info py-4">
+          مرحبا بك في تطبيق <span class="text-primary font-italic font-weight-bold">ودق</span> لتصنيف الأطعمة <br>من حيث
+          جنسها وحكمها
+        </p>
+
+      </div>
     </div>
-    <div class="intro-btns d-flex justify-content-center">
-      <a routerLink="/vegetarian" class="btn btn-lg btn-success shadow-none">نباتى</a>
-      <a routerLink="/animal" class="btn btn-lg btn-danger shadow-none">حيوانى</a>
+    <div class="know-more py-3">
+      <p class="text-primary">لمعرفة المزيد اختر أحد الصنفين التاليين</p>
+      <div class="intro-btns  d-flex justify-content-center">
+        <a routerLink="/vegetarian" class="btn btn-lg btn-success shadow-none">نباتى</a>
+        <a routerLink="/animal" class="btn btn-lg btn-danger shadow-none">حيوانى</a>
+      </div>
     </div>
+
   </div>
 </main>
